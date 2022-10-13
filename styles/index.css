@@ -1,0 +1,107 @@
+body {
+  background-color: hsl(210deg, 46%, 95%);
+  font-family: "Barlow Semi Condensed", sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1, p {
+  font-size: 0.813rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+.card {
+  border-radius: 0.7rem;
+  padding: 1.5rem;
+}
+.card .verified {
+  opacity: 50%;
+}
+.card .review {
+  opacity: 70%;
+}
+
+.comment {
+  margin-top: 1rem;
+}
+
+.profile-pic {
+  float: left;
+  border-radius: 100%;
+  border-style: solid;
+  border-width: 0.03em;
+  margin-right: 1rem;
+  width: 1.7rem;
+}
+
+.purple {
+  color: hsl(263deg, 55%, 52%);
+}
+
+.white {
+  color: #FFF;
+}
+
+.container-card {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: [first] 16rem [line2] 16rem [line3] 16rem [line4] 16rem [end];
+  grid-template-rows: [row1-start] 17rem [row1-end] 17rem [row2-end];
+  -moz-column-gap: 1.79rem;
+       column-gap: 1.79rem;
+  row-gap: 1.5rem;
+  margin: 9.4rem 6.4rem;
+}
+
+.grid-item-1 {
+  background-color: hsl(263deg, 55%, 52%);
+  color: hsl(0deg, 0%, 100%);
+  grid-area: row1-start/first/row1-end/line3;
+  position: relative;
+  background-image: url(../images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: top right calc(6.5em + 0.375rem);
+}
+
+.grid-item-2 {
+  background-color: hsl(217deg, 19%, 35%);
+  color: hsl(0deg, 0%, 100%);
+}
+
+.grid-item-3 {
+  background-color: hsl(0deg, 0%, 100%);
+  color: hsl(217deg, 19%, 35%);
+  grid-area: row1-start/line4/row2-end/end;
+  align-items: stretch;
+}
+
+.grid-item-4 {
+  background-color: hsl(0deg, 0%, 100%);
+  color: hsl(217deg, 19%, 35%);
+  grid-area: row1-end/first/row2-end/line2;
+}
+
+.grid-item-5 {
+  background-color: hsl(219deg, 29%, 14%);
+  color: hsl(0deg, 0%, 100%);
+  grid-area: row1-end/line2/row2-end/line4;
+  align-items: stretch;
+}
+
+@media (max-width: 1130px) {
+  .container-card {
+    display: flex;
+    flex-direction: column;
+    margin: 5rem 1.5rem;
+  }
+  .grid-item-1 {
+    background-position: top right calc(1em + 0.375rem);
+  }
+}/*# sourceMappingURL=index.css.map */

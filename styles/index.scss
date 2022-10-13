@@ -1,0 +1,170 @@
+// - Mobile: 375px
+// - Desktop: 1440px
+
+// Note for text colors:
+
+// 1. "Verified Graduate" has the same color as the person's name with 50% opacity
+// 2. Review paragraphs inside the quotations have the same color as well, but are at 70% opacity
+
+
+// Colors 
+
+// Primary 
+
+$moderate-violet: hsl(263, 55%, 52%);
+$very-dark-grayish-blue: hsl(217, 19%, 35%);
+$very-dark-blackish-blue: hsl(219, 29%, 14%);
+$white: hsl(0, 0%, 100%);
+
+// Neutral
+
+$light-gray: hsl(0, 0%, 81%);
+$light-grayish-blue: hsl(210, 46%, 95%);
+
+// Font
+
+$body-font: 'Barlow Semi Condensed', sans-serif;
+$body-font-size: 0.813rem;
+
+// 
+
+body {
+    background-color: $light-grayish-blue;
+    font-family: $body-font;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1, p {
+    font-size: $body-font-size;
+    font-weight: 500;
+    margin: 0;
+}
+
+h2 {
+    font-size: 1.2rem;
+}
+
+.card {
+    border-radius: 0.7rem;
+    padding: 1.5rem;
+    // margin: auto;
+    
+    .verified {
+        opacity: 50%;
+    }
+
+    .review {
+        opacity: 70%;
+    }
+}
+
+// .bg-pattern {
+//     position: absolute;
+//     z-index: 1;
+// }
+
+.comment {
+    margin-top: 1rem;
+}
+
+.profile-pic {
+    float: left;
+    border-radius: 100%;
+    border-style: solid;
+    border-width: 0.03em;
+    margin-right: 1rem;
+    width: 1.7rem;
+}
+
+.purple {
+    color: $moderate-violet;
+}
+
+.white {
+    color: #FFF;
+}
+
+
+// Grid
+.container-card {
+    // max-width: 15rem;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: [first] 16rem [line2] 16.0rem [line3] 16.0rem [line4] 16.0rem [end];
+    grid-template-rows: [row1-start] 17rem [row1-end] 17rem [row2-end];
+    column-gap: 1.79rem;
+    row-gap: 1.5rem;
+    margin: 9.4rem 6.4rem;
+}
+
+
+
+// Cards
+.grid-item-1 {
+    background-color: $moderate-violet;
+    color: $white;
+    grid-area: row1-start / first / row1-end / line3;
+    position: relative;
+    background-image: url(../images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: top right calc(6.5em + 0.375rem);
+
+}
+
+.grid-item-2 {
+    background-color: $very-dark-grayish-blue;
+    color: $white;
+}
+
+.grid-item-3 {
+    background-color: $white;
+    color: $very-dark-grayish-blue;
+    grid-area: row1-start / line4 / row2-end / end;
+    align-items: stretch;
+}
+
+.grid-item-4 {
+    background-color: $white;
+    color: $very-dark-grayish-blue;
+    grid-area: row1-end / first / row2-end / line2;
+}
+
+.grid-item-5 {
+    background-color: $very-dark-blackish-blue;
+    color: $white;
+    grid-area: row1-end / line2 / row2-end / line4;
+    align-items: stretch;
+}
+
+
+
+// Media Query
+
+@media (max-width: 1130px) {
+    .container-card {
+        display: flex;
+        flex-direction: column;
+        margin: 5rem 1.5rem;
+    }
+
+    .grid-item-1 {
+        background-position: top right calc(1em + 0.375rem);
+    }
+
+}
+
+
+
+// Footer
+// .attribution { 
+//     position: relative;
+//     font-size: 11px; 
+//     text-align: center; 
+
+//     a { 
+//         color: hsl(228, 45%, 44%); 
+//     }
+// }
